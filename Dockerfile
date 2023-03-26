@@ -3,7 +3,7 @@ FROM debian:latest
 
 RUN apt update && apt install openssh-server sudo -y \
     && apt-get install -y net-tools lsof \
-    && apt-get install -y vim \
+    && apt-get install -y vim nano \
     && apt-get install -y nmap netcat curl iputils-ping
 
 RUN mkdir /var/run/sshd
