@@ -22,7 +22,7 @@ ssh pivote@localhost -p2222
 
 # Pivote tunnel to gke machine
 1. **Port forwarding on router.**  
-192.168.0.103 - is ip address of local machine. This means that all requests from the public internet on port 443 will be redirected to the local machine.
+This 192.168.0.103 ip address of local machine. This means that all requests from the public internet on port 443 will be redirected to the local machine.
 ```
 /ip firewall nat add action=dst-nat chain=dstnat disabled=no dst-port=443 in-interface=ether1 protocol=tcp to-addresses=192.168.0.103 to-ports=2222
 ```
